@@ -1,4 +1,4 @@
-# Laravel 8 Eloquent 模型的內合併關聯性
+# Laravel 10 Eloquent 模型的內合併關聯性
 
 這種聯結可以透過比對資料表之間共同的欄位值，從兩個以上的資料表中擷取資料列。
 
@@ -12,7 +12,7 @@ $ git clone
 ```sh
 $ composer install
 ```
-- 產⽣ Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
+- 產生 Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
 ```sh
 $ php artisan key:generate
 ```
@@ -28,11 +28,11 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/BxZH1Ob.png)
+![](https://i.imgur.com/fL3ZeZ0.png)
 > 使用者最後登入時間
 
-![](https://i.imgur.com/0HfsjIT.png)
+![](https://i.imgur.com/xOuugG9.png)
 > 前十筆啟用使用者清單
 
-![](https://i.imgur.com/rjPi8bq.png)
+![](https://i.imgur.com/cWtcP7U.png)
 > 前十筆有價格商品清單
