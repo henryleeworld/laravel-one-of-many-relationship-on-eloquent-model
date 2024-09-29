@@ -2,22 +2,19 @@
 
 namespace Database\Seeders;
 
-use App\Models\Price;
 use App\Models\Product;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
-     *
-     * @return void
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         Product::factory()
             ->count(100)
-            ->has(Price::factory(30))
+            ->hasPrices(30)
             ->create();
     }
 }

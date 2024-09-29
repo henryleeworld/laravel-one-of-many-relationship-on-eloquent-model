@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
 class RelationshipController extends Controller 
@@ -15,7 +15,7 @@ class RelationshipController extends Controller
         if ($latestLogin->exists()) {
             $latestLoginAry = $latestLogin->get();
             foreach ($latestLoginAry as $login) {
-                echo '使用者：' . $login->user_id . ' 最後建立時間：' . $login->created_at . '。' . PHP_EOL;
+                echo __('User :user_id\'s latest creation date is :created_at.', ['user_id' => $login->user_id, 'created_at' => $login->created_at]) . PHP_EOL;
             }
         }
     }
@@ -26,18 +26,18 @@ class RelationshipController extends Controller
         $activeUsers = User::whereHas('current_state', function ($q) {
             $q->where('state', 'active');
         })->get()->slice(0, 10);
-        echo '啟用的使用者前十筆清單如下：' . PHP_EOL;
+        echo __('The top ten lists of activated users are as follows: ') . PHP_EOL;
         foreach ($activeUsers as $user) {
-            echo '使用者：' . $user->id . '。' . PHP_EOL;
+            echo __('User: ') . $user->id . __('.') . PHP_EOL;
         }
     }
 
     public function productPrice()
     {
         $products = Product::with('price')->get()->slice(0, 10);
-        echo '有價格的產品前十筆清單如下：' . PHP_EOL;
+        echo __('The top ten lists of products with prices are as follows: ') . PHP_EOL;
         foreach ($products as $product) {
-            echo '產品：' . $product->id . '。' . PHP_EOL;
+            echo __('Product: ') . $product->id . __('.') . PHP_EOL;
         }
     }
 }

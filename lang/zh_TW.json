@@ -1,0 +1,8 @@
+{
+    ".": "。",
+    "Product: ": "產品：",
+    "The top ten lists of activated users are as follows: ": "啟用的使用者前十筆清單如下：",
+    "The top ten lists of products with prices are as follows: ": "有價格的產品前十筆清單如下：",
+    "User: ": "使用者：",
+    "User :user_id's latest creation date is :created_at.": "使用者 :user_id 的最後建立時間是 :created_at。"
+}

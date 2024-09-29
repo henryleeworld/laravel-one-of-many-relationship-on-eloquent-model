@@ -11,15 +11,16 @@ class Product extends Model
 {
     use HasFactory;
 
+    /**
+     * Get the prices for the product.
+     */
     public function prices(): HasMany
     {
         return $this->hasMany(Price::class);
     }
 
     /**
-     * The current price of the product that was last published.
-     *
-     * @return HasOne
+     * Get the current price of the product that was last published.
      */
     public function price(): HasOne
     {
