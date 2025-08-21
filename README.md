@@ -1,4 +1,4 @@
-# Laravel 11 Eloquent 模型的內合併關聯性
+# Laravel 12 Eloquent 模型的內合併關聯性
 
 這種聯結可以透過比對資料表之間共同的欄位值，從兩個以上的資料表中擷取資料列。
 
@@ -28,11 +28,11 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/Ex9bVRA.png)
+![](https://i.imgur.com/4xoOdHs.png)
 > 使用者最後登入時間
 
-![](https://i.imgur.com/eKETzBo.png)
+![](https://i.imgur.com/rY62flL.png)
 > 前十筆啟用使用者清單
 
-![](https://i.imgur.com/vvXUAIQ.png)
+![](https://i.imgur.com/G0XxatB.png)
 > 前十筆有價格商品清單

@@ -8,13 +8,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Login extends Model
 {
+    /** @use HasFactory<\Database\Factories\LoginFactory> */
     use HasFactory, Notifiable;
     // use \Staudenmeir\EloquentEagerLimit\HasEagerLimit;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $fillable = [];
 }
